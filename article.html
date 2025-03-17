@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/381ff44da5.js" crossorigin="anonymous"></script>
+    <title>All About Stuxnet - BYTEBOMB</title>
+    <link rel="icon" type="image/x-icon" href="images/bytebomb-logo.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="heading-wrapper">
+            <img src="images/bytebomb-logo.svg" alt="">
+            <h1><a href="index.html">BYTEBOMB</a></h1>
+        </div>
+        <a id="ham-menu-button" href="javascript:void(0)" onclick="toggleNavMenu()">
+            <i class="fa-solid fa-bars" title="menu" aria-hidden="true"></i>
+            <span class="sr-only">Navigation Menu</span>
+        </a>
+        <nav>
+            <ul id="menu">
+                <li class="hideLi"><a href="index.html">Home</a></li>
+                <li class="hideLi"><a href="article.html">Articles</a></li>
+                <li class="hideLi"><a href="contact.html">Contact</a></li>
+                <li class="hideLi"><a href="sources.html">Sources</a></li>
+            </ul>
+        </nav>
+        <a id="search-bar-button" href="javascript:void(0)" onclick="toggleSearchBar()">
+            <i class="fa-solid fa-magnifying-glass" title="menu" aria-hidden="true"></i>
+            <span class="sr-only">Search Bar</span>
+        </a>
+        <div id="search-bar">
+            <input type="text" placeholder="Search">
+        </div>
+    </header>
+
+    <main>
+        <section class="article-section">
+            <article>
+                <img id="main-article-img" src="images/iran-nuclear-plant.jpg" alt="Nuclear power plant cooling towers, big chimneys beside Wheat field with partly cloudy sky in Kurdistan province, Iran">
+                <div class="article-info">
+                    <h2>All About Stuxnet</h2>
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="fa-solid fa-share-from-square" title="Share" aria-hidden="true"></i>
+                                <span class="sr-only">Share</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">
+                                <i class="fa-regular fa-bookmark"  title="Bookmark" aria-hidden="true"></i>
+                                <span class="sr-only">Bookmark</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="article-info-details">
+                        <p id="author">by Wiki Pedia</p>
+                        <p id="post-date">Dec 12, 2024</p>
+                        <p id="update-date">Updated Dec 14 2024</p>
+                    </div>
+                </div>
+                <p>Stuxnet is a malicious computer worm first uncovered in 2010 and thought to have been in development since at least 2005. Stuxnet targets supervisory control and data acquisition (SCADA) systems and is believed to be responsible for causing substantial damage to the nuclear program of Iran. Although neither country has openly admitted responsibility, multiple independent news organizations recognize Stuxnet to be a cyberweapon built jointly by the United States and Israel in a collaborative effort known as Operation Olympic Games. The program, started during the Bush administration, was rapidly expanded within the first months of Barack Obama's presidency.</p>
+                <p>Stuxnet specifically targets programmable logic controllers (PLCs), which allow the automation of electromechanical processes such as those used to control machinery and industrial processes including gas centrifuges for separating nuclear material. Exploiting four zero-day flaws, Stuxnet functions by targeting machines using the Microsoft Windows operating system and networks, then seeking out Siemens Step7 software. Stuxnet reportedly compromised Iranian PLCs, collecting information on industrial systems and causing the fast-spinning centrifuges to tear themselves apart. Stuxnet's design and architecture are not domain-specific and it could be tailored as a platform for attacking modern SCADA and PLC systems (e.g., in factory assembly lines or power plants), most of which are in Europe, Japan, and the United States. Stuxnet reportedly destroyed almost one-fifth of Iran's nuclear centrifuges. Targeting industrial control systems, the worm infected over 200,000 computers and caused 1,000 machines to physically degrade.</p>
+                <p>Stuxnet has three modules: a worm that executes all routines related to the main payload of the attack; a link file that automatically executes the propagated copies of the worm; and a rootkit component responsible for hiding all malicious files and processes, to prevent detection of Stuxnet. It is typically introduced to the target environment via an infected USB flash drive, thus crossing any air gap. The worm then propagates across the network, scanning for Siemens Step7 software on computers controlling a PLC. In the absence of either criterion, Stuxnet becomes dormant inside the computer. If both the conditions are fulfilled, Stuxnet introduces the infected rootkit onto the PLC and Step7 software, modifying the code and giving unexpected commands to the PLC while returning a loop of normal operation system values back to the users.</p>
+
+                <h3>Discovery</h3>
+                <p>Stuxnet, discovered by Sergey Ulasen from a Belarussian antivirus company VirusBlokAda, initially spread via Microsoft Windows, and targeted Siemens industrial control systems. While it is not the first time that hackers have targeted industrial systems, nor the first publicly known intentional act of cyberwarfare to be implemented, it is the first discovered malware that spies on and subverts industrial systems, and the first to include a programmable logic controller (PLC) rootkit.</p>
+                <p>The worm initially spreads indiscriminately, but includes a highly specialized malware payload that is designed to target only Siemens supervisory control and data acquisition (SCADA) systems that are configured to control and monitor specific industrial processes. Stuxnet infects PLCs by subverting the Step-7 software application that is used to reprogram these devices.</p>
+                <p>Different variants of Stuxnet targeted five Iranian organizations, with the probable target widely suspected to be uranium enrichment infrastructure in Iran; Symantec noted in August 2010 that 60 percent of the infected computers worldwide were in Iran. Siemens stated that the worm caused no damage to its customers, but the Iran nuclear program, which uses embargoed Siemens equipment procured secretly, was damaged by Stuxnet. Kaspersky Lab concluded that the sophisticated attack could only have been conducted "with nation-state support." F-Secure's chief researcher Mikko Hyppönen, when asked if possible nation-state support were involved, agreed: "That's what it would look like, yes."</p>
+
+                <figure class="fig-float-right">
+                    <img src="images/gas_centrifuge_cascade.jpg" alt="A large room with long rows of nuclear centrifuges">
+                    <figcaption>An example of nuclear centrifuges used to enrich uranium. These were the machines that Stuxnet was targeting.</figcaption>
+                </figure>
+
+                <p>In May 2011, the PBS program Need To Know cited a statement by Gary Samore, White House Coordinator for Arms Control and Weapons of Mass Destruction, in which he said, "we're glad they [the Iranians] are having trouble with their centrifuge machine and that we — the U.S. and its allies — are doing everything we can to make sure that we complicate matters for them," offering "winking acknowledgement" of United States involvement in Stuxnet. According to The Daily Telegraph, a showreel that was played at a retirement party for the head of the Israel Defense Forces (IDF), Gabi Ashkenazi, included references to Stuxnet as one of his operational successes as the IDF chief of staff.</p>
+                <p>On 1 June 2012, an article in The New York Times reported that Stuxnet was part of a US and Israeli intelligence operation named Operation Olympic Games, devised by the NSA under President George W. Bush and executed under President Barack Obama.</p>
+                <p>On 24 July 2012, an article by Chris Matyszczyk from CNET reported that the Atomic Energy Organization of Iran e-mailed F-Secure's chief research officer Mikko Hyppönen to report a new instance of malware.</p>
+                <p>On 25 December 2012, an Iranian semi-official news agency announced there was a cyberattack by Stuxnet, this time on the industries in the southern area of the country. The malware targeted a power plant and some other industries in Hormozgan province in recent months.</p>
+                <p>According to Eugene Kaspersky, the worm also infected a nuclear power plant in Russia. Kaspersky noted, however, that since the power plant is not connected to the public Internet, the system should remain safe.</p>
+
+                <h3>Target</h3>
+
+                <p>According to the Israeli newspaper Haaretz, in September 2010 experts on Iran and computer security specialists were increasingly convinced that Stuxnet was meant "to sabotage the uranium enrichment facility at Natanz – where the centrifuge operational capacity had dropped over the past year by 30 percent." On 23 November 2010 it was announced that uranium enrichment at Natanz had ceased several times because of a series of major technical problems. A "serious nuclear accident" (supposedly the shutdown of some of its centrifuges) occurred at the site in the first half of 2009, which is speculated to have forced Gholam Reza Aghazadeh, the head of the Atomic Energy Organization of Iran (AEOI), to resign. Statistics published by the Federation of American Scientists (FAS) show that the number of enrichment centrifuges operational in Iran mysteriously declined from about 4,700 to about 3,900 beginning around the time the nuclear incident WikiLeaks mentioned would have occurred. The Institute for Science and International Security (ISIS) suggests, in a report published in December 2010, that Stuxnet is a reasonable explanation for the apparent damage at Natanz, and may have destroyed up to 1,000 centrifuges (10 percent) sometime between November 2009 and late January 2010.</p>
+
+                <figure class="fig-float-left">
+                    <img src="images/natanz_nuclear.jpg" alt="Anti-aircraft guns surrounded by big hills and mountains in Natanz Nuclear Facility">
+                    <figcaption>Anti-aircraft guns guarding Natanz Nuclear Facility</figcaption>
+                </figure>
+
+                <p>The Institute for Science and International Security (ISIS) report further notes that Iranian authorities have attempted to conceal the breakdown by installing new centrifuges on a large scale.</p>
+
+                <p>The worm worked by first causing an infected Iranian IR-1 centrifuge to increase from its normal operating speed of 1,064 hertz to 1,410 hertz for 15 minutes before returning to its normal frequency. Twenty-seven days later, the worm went back into action, slowing the infected centrifuges down to a few hundred hertz for a full 50 minutes. The stresses from the excessive, then slower, speeds caused the aluminium centrifugal tubes to expand, often forcing parts of the centrifuges into sufficient contact with each other to destroy the machine.</p>
+
+                <p>According to The Washington Post, International Atomic Energy Agency (IAEA) cameras installed in the Natanz facility recorded the sudden dismantling and removal of approximately 900–1,000 centrifuges during the time the Stuxnet worm was reportedly active at the plant. Iranian technicians, however, were able to quickly replace the centrifuges and the report concluded that uranium enrichment was likely only briefly disrupted.</p>
+
+            </article>
+
+            <section class="read-more-section">
+                <h2>Read More</h2>
+                <div class="section-cards">
+                    <div class="article-card">
+                        <img src="images/malware-1.jpg" alt="The text WannaCry in red surrounded by green binary numbers">
+                        <h3><a href="#">WannaCry Ransomware</a></h3>
+                    </div>
+                    <div class="article-card">
+                        <img src="images/hacking-2.jpg" alt="Isometric vector illustration of a hooded hacker at a laptop">
+                        <h3><a href="#">Learn Ethical Hacking with Hack The Box</a></h3>
+                    </div>
+                    <div class="article-card">
+                        <img src="images/hacking-3.jpg" alt="Orange broken lock graphic on a blue abstract electronic circuit board background">
+                        <h3><a href="#">Cyber Hygiene: Practices to Stay Safe from Hackers</a></h3>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+ 
+    <footer>
+        <p>&copy; Neil Geniebla</p>
+        <ul id="socials">
+            <li>
+                <a href="https://x.com">
+                    <i class="fab fa-twitter" title="Twitter" aria-hidden="true"></i>
+                    <span class="sr-only">Twitter</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://facebook.com">
+                    <i class="fab fa-facebook" title="Facebook" aria-hidden="true"></i>
+                    <span class="sr-only">Facebook</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://instagram.com">
+                    <i class="fab fa-instagram" title="Instagram" aria-hidden="true"></i>
+                    <span class="sr-only">Instagram</span>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <script type="text/javascript" src="header.js"></script>
+</body>
+</html>

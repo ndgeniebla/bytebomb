@@ -1,0 +1,15 @@
+
+@import "partials/variables/variables";
+
+// General
+@import "partials/typography";
+@import "partials/media";
+
+// Elements used in all pages
+@import "partials/header_footer";
+
+// Specific pages
+@import "partials/pages/main";
+@import "partials/pages/article";
+@import "partials/pages/contact";
+@import "partials/pages/sources";

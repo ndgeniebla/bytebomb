@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/380ff44da5.js" crossorigin="anonymous"></script>
+    <title>BYTEBOMB</title>
+    <link rel="icon" type="image/x-icon" href="images/bytebomb-logo.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="heading-wrapper">
+            <img src="images/bytebomb-logo.svg" alt="">
+            <h1><a href="index.html">BYTEBOMB</a></h1>
+        </div>
+        <a id="ham-menu-button" href="javascript:void(0)" onclick="toggleNavMenu()">
+            <i class="fa-solid fa-bars" title="menu" aria-hidden="true"></i>
+            <span class="sr-only">Navigation Menu</span>
+        </a>
+        <nav>
+            <ul id="menu">
+                <li class="hideLi"><a href="index.html">Home</a></li>
+                <li class="hideLi"><a href="article.html">Articles</a></li>
+                <li class="hideLi"><a href="contact.html">Contact</a></li>
+                <li class="hideLi"><a href="sources.html">Sources</a></li>
+            </ul>
+        </nav>
+        <a id="search-bar-button" href="javascript:void(0)" onclick="toggleSearchBar()">
+            <i class="fa-solid fa-magnifying-glass" title="menu" aria-hidden="true"></i>
+            <span class="sr-only">Search Bar</span>
+        </a>
+        <div id="search-bar">
+            <input type="text" placeholder="Search">
+        </div>
+    </header>
+        
+    <main>
+        <section id="featured">
+            <h2>Featured Article</h2>
+            <div class="article-box">
+                <img src="images/iran-nuclear-plant.jpg" alt="Nuclear power plant cooling towers, big chimneys beside Wheat field with partly cloudy sky in Kurdistan province, Iran">
+                <div class="article-details">
+                    <h3><a href="article.html">All About Stuxnet</a></h3>
+                    <p>The extremely destructive and complex computer worm that shocked malware experts and the world in 2010.</p>
+                    <p class="button-holder"><a href="article.html">Read More</a></p>
+                </div>
+            </div>
+        </section>
+        <section id="malware">
+            <h2>Malware</h2>
+            <div class="article-box">
+                <a href="#"><img src="images/malware-1.jpg" alt="The text WannaCry in red surrounded by green binary numbers"></a>
+                <div class="article-details">
+                    <h3><a href="article.html">WannaCry Ransomware</a></h3>
+                </div>
+            </div>
+            <div class="article-card">
+                <div class="article-details">
+                    <h3><a href="article.html">What are Zero-day Vulnerabilities?</a></h3>
+                </div>
+            </div>
+            <div class="article-card">
+                <div class="article-details">
+                    <h3><a href="article.html">Different Malware Types and How They Work</a></h3>
+                </div>
+            </div>
+            <div class="article-card">
+                <div class="article-details">
+                    <h3><a href="article.html">CIH: The Virus that Destroyed Millions of Computers</a></h3>
+                </div>
+            </div>
+        </section>
+        <section id="hacking">
+            <h2>Hacking</h2>
+            <div class="section-cards">
+                <div class="article-card">
+                    <img src="images/hacking-1.jpg" alt="Vector illustration of a figure with a long coat and a hat">
+                    <h3><a href="article.html">Black Hat, White Hat, and Grey Hat Hackers Explained</a></h3>
+                </div>
+                <div class="article-card">
+                    <img src="images/hacking-2.jpg" alt="Isometric vector illustration of a hooded hacker at a laptop">
+                    <h3><a href="article.html">Learn Ethical Hacking with Hack The Box</a></h3>
+                </div>
+                <div class="article-card">
+                    <img src="images/hacking-3.jpg" alt="Orange broken lock graphic on a blue abstract electronic circuit board background">
+                    <h3><a href="article.html">Cyber Hygiene: Practices to Stay Safe from Hackers</a></h3>
+                </div>
+            </div>
+        </section>
+    
+        <section id="subscribe-box">
+            <div class="sub-details">
+                <h2>Subscribe to our newsletter!</h2>
+                <p>Stay up-to-date on the latest news about malware, ethical hacking, and cybersecurity.</p>
+                <input type="text" placeholder="Your e-mail address">
+                <p class="button-holder"><a href="javascript:void(0)">Subscribe</a></p>
+            </div>
+            <img class="pixel-asset" src="images/bytebomb-subscribe.png" alt="">
+        </section>
+
+    </main>
+    
+    <footer>
+        <p>&copy; Neil Geniebla</p>
+        <ul id="socials">
+            <li>
+                <a href="https://x.com">
+                    <i class="fab fa-twitter" title="Twitter" aria-hidden="true"></i>
+                    <span class="sr-only">Twitter</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://facebook.com">
+                    <i class="fab fa-facebook" title="Facebook" aria-hidden="true"></i>
+                    <span class="sr-only">Facebook</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://instagram.com">
+                    <i class="fab fa-instagram" title="Instagram" aria-hidden="true"></i>
+                    <span class="sr-only">Instagram</span>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <script type="text/javascript" src="header.js"></script>
+</body>
+</html>

@@ -1,0 +1,336 @@
+// This is for CSS mainly for index.html
+// Some things are applicable to all pages, though, like the body and main styling.
+
+body {
+    margin: 0;
+    background-color: $bg;
+    box-shadow: inset 0px 0px 0px 4px $section-shadow;
+}
+
+main {
+    margin: 1rem auto;
+    padding: 0 1rem;
+    
+    @media screen and (min-width: 600px) {
+        max-width: 700px;
+    }
+    
+    @media screen and (min-width: 1100px) {
+        max-width: 1000px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+}
+
+section {
+    margin-top: 3rem;
+    padding: 1rem 1rem 0 1rem;
+    border: 4px solid $primary;
+    border-radius: 8px;  
+    box-shadow: 4px 4px 0 $section_shadow;
+}
+
+h2 {
+    background-color: $primary;
+    color: $heading_color;
+    padding: 0.5rem;
+    margin: -1rem -1rem 1rem -1rem;
+}
+
+// For articles that stand out on the homescreen. Boxed shape..
+// Sections that use it: Featured article, hacking
+.article-box {
+    background-color: $bg_main;
+    border: 4px solid $primary;
+    // border-top: 24px solid $primary;
+    // border-radius: 6px;
+
+    border-radius: 0 0 8px 8px;
+
+    margin-bottom: 1rem;
+    img {
+        max-height: 350px;
+        object-fit: cover;
+        margin: 0;
+        border-bottom: 4px solid $primary;
+        z-index: 0;
+    }
+}
+
+// For articles on the homescreen that are more rectangular shaped
+// sections that use it: Malware, Hacking
+// Can contain images
+.article-card {
+    display: flex;
+    align-items: center;
+
+    border: 4px solid $primary;
+    // border-radius: 6px;
+
+    margin-bottom: 1rem;
+    background-color: $bg_main;
+
+    img {
+        flex-basis: 30%;
+        max-width: 30%;
+        border-right: 4px solid $primary;
+        margin-right: 1rem;
+    }
+    
+    h3 {
+        margin: 0;
+        flex-basis: 70%;
+    }
+
+    @media screen and (min-width: 600px)  {
+        img {
+            max-width: 100%;
+            flex-basis: 20%;
+        }
+        
+        h3 {
+            flex-basis: 80%;
+        }
+    }
+
+    @media screen and (min-width: 1100px) {
+        img {
+            flex-basis: 80%;
+        }
+        
+        h3 {
+            flex-basis: 20%;
+        }
+    }
+}
+
+.article-details {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    bottom: 0;
+    z-index: 1;
+}
+
+#featured {
+    padding: 0;
+    border: none;
+    background-color: $bg_main;
+    
+    h2 {
+        border-radius: 8px 8px 0 0;
+        margin: 0;
+    }
+    
+    h3 {
+        margin: 0;
+    }
+
+    .article-box {
+        margin-bottom: 0;
+    }
+    
+    @media screen and (min-width: 1100px) {
+        display: flex;
+        flex-direction: column;
+        .article-box {
+            flex-grow: 1;
+        }
+        margin-top: 0;
+        flex-basis: 50%;
+    }
+}
+
+#malware {
+    padding-bottom: 1rem;
+    .article-box {
+        border-radius: 0px;
+        h3 {
+            margin: 0;
+        }
+    }
+
+    @media screen and (min-width: 600px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, max-content);
+        gap: 0.7rem;
+        h2 {
+            grid-column: span 2;
+        }
+
+        .article-box {
+            img {
+                max-height: 75%;
+                object-fit: cover;
+            }
+            grid-column: span 1;
+            grid-row: span 3;
+        }
+    }
+    
+    @media screen and (min-width: 1100px) {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 33%;
+        justify-content: center;
+        margin-top: 0;
+
+        h2 {
+            flex: 1 0 100%;
+            height: 2rem;
+        }
+        
+        .article-box {
+            flex: 1 0 100%;
+            height: 45%;
+            margin: 0;
+            margin-top: -1rem;
+            border-radius: 0;
+
+            img {
+                max-height: 80%;
+            }
+
+            .article-details {
+                height: 10%;
+            }
+        }
+        
+        .article-card {
+            flex: 1 0 100%;
+            display: block;
+            margin: 0;
+            margin-top: 0;
+            max-height: 12%;
+        }
+    }
+}
+
+#hacking {
+    h3 {
+        margin-right: 1rem;
+    }
+    @media screen and (min-width: 1100px) {
+        margin-top: 0;
+        flex-basis: 86%;
+        
+        .section-cards {
+            display: flex;
+            gap: 1rem;
+
+            .article-card {
+                justify-items: center;
+                flex-direction: column;
+                flex-basis: 20%;
+                
+                img {
+                    flex-basis: 60%;
+                    height: 60%;
+                    margin: 0;
+                    border: none;
+                    border-bottom: 4px solid $primary;
+                    object-fit: cover;
+                }
+                
+                h3 {
+                    flex-basis: 40%;
+                    margin: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+.button-holder {
+    text-align: right;
+    a {
+        background-color: $button_bg;
+        display: inline-block;
+        text-decoration: none;
+        text-transform: uppercase;
+        border: 2px solid $primary;
+        padding: 4px 8px;
+        color: $primary;
+        box-shadow: 3px 3px 0 $primary;
+    }
+    
+    a:active {
+        transform: translate(3px, 3px);
+        -webkit-transform: translate(3px, 3px);
+        -moz-transform: translate(3px, 3px);
+        box-shadow: none;
+    }
+}
+
+#subscribe-box {
+    background-color: $primary;
+    color: $sub_box_color;
+    margin: 3rem 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+
+    h2 {
+        margin: 0;
+        padding: 0;
+        background-color: #00000000;
+    }
+    
+    input {
+        height: 50%;
+        width: 95%;
+        background-color: $heading_color_bg;
+        border: 4px solid $heading_color;
+        color: $heading_color;
+        border-radius: 8px;
+        padding: 8px;
+    }
+
+    //for holding the submit button
+    .button-holder {
+        a {
+            box-shadow: 3px 3px 0 $sub_button_shadow;
+        }
+        
+        a:hover {
+            text-decoration: none;
+        }
+
+        a:active {
+            transform: translate(3px, 3px);
+            -webkit-transform: translate(3px, 3px);
+            -moz-transform: translate(3px, 3px);
+            box-shadow: none;
+        }
+    }
+    
+    input::placeholder {
+        color: $heading_color;
+    }
+    
+    img {
+        display: none;
+    }
+    
+    //have to change the layout here to accommodate for the computer image/graphic to the right of the box
+    @media screen and (min-width: 1100px) {
+        display: flex;
+        height: 210px;
+        flex-basis: 66%;
+        gap: 5rem;
+        
+        .sub-details {
+            flex-basis: 66%;
+        }
+        
+        img {
+            display: block;
+            flex-basis: 34%;
+            transform: scale(1.4) translateX(1rem);
+        }
+
+        input {
+            height: 10%;
+        }
+    }
+}

@@ -1,0 +1,145 @@
+.contact-main {
+    min-height: 70vh;
+    h2 {
+        margin-top: 1rem;
+        color: $primary;
+        background-color: rgba(0, 0, 0, 0);
+        text-align: center;
+    }
+    
+    @media screen and (min-width: 1100px) {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.contact-header {
+    flex-basis: 50%;
+    h2 {
+        margin-bottom: -0.2rem;
+    }
+    
+    @media screen and (min-width: 1100px) {
+        h2 {
+            margin-top: -1rem;
+        }
+    }
+}
+
+#contact-form {
+    background-color: $primary;
+    border-radius: 8px;
+    padding: 2rem 1rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    
+    margin-bottom: 3rem;
+
+    label {
+        color: $heading_color;
+    }
+
+    input {
+        width: 90%;
+        display: block;
+        z-index: 1;
+        background-color: $heading_color_bg;
+        border: 4px solid $heading_color;
+        border-radius: 8px;
+        color: $heading_color;
+        margin-top: 8px;
+        padding: 8px;
+    }
+
+    @media screen and (min-width: 1100px) {
+        flex-basis: 40%;
+    }
+}
+
+#label-fname, #label-lname {
+    @media screen and (max-width: 500px) {
+        flex-basis: 100%;
+        input {
+            width: 94%;
+        }
+    }
+
+    flex-basis: 48%;
+
+    @media screen and (min-width: 600px) {
+        input {
+            width: 92.5%;
+        }
+    }
+    
+    @media screen and (min-width: 1100px) {
+        flex-basis: 47%;
+        input {
+            width: 87%;
+        }
+    }
+}
+
+#label-email, #label-message {
+    flex-basis: 100%;
+    input {
+        width: 94%;
+    }
+
+    @media screen and (min-width: 600px) {
+        flex-basis: 98%;
+        input {
+            width: 96.5%;
+        }
+    }
+    
+    @media screen and (min-width: 1100px) {
+        input {
+            width: 93.5%;
+        }
+    }
+}
+
+textarea {
+    display: block;
+    width: 97%;
+    margin-top: 0.5rem;
+    resize: vertical;
+    // flex-basis: 93%;
+    min-height: 100px;
+    
+    @media screen and (min-width: 600px) {
+        width: 99%;
+    }
+
+    @media screen and (min-width: 1100px) {
+        width: 97%;
+    }
+}
+
+button[type=submit] {
+    width: 100px;
+    height: 40px;
+    background-color: $button_bg;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid $primary;
+    padding: 4px 8px;
+    color: $primary;
+    box-shadow: 3px 3px 0 $sub_button_shadow;
+}
+
+button[type=submit]:active {
+    transform: translate(3px, 3px);
+    box-shadow: none;
+}
+
+
+.submit-button-container {
+    display: flex;
+    justify-content: end;
+    flex-basis: 94%;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/381ff44da5.js" crossorigin="anonymous"></script>
+    <title>Contact - BYTEBOMB</title>
+    <link rel="icon" type="image/x-icon" href="images/bytebomb-logo.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="heading-wrapper">
+            <img src="images/bytebomb-logo.svg" alt="">
+            <h1><a href="index.html">BYTEBOMB</a></h1>
+        </div>
+        <a id="ham-menu-button" href="javascript:void(0)" onclick="toggleNavMenu()">
+            <i class="fa-solid fa-bars" title="menu" aria-hidden="true"></i>
+            <span class="sr-only">Navigation Menu</span>
+        </a>
+        <nav>
+            <ul id="menu">
+                <li class="hideLi"><a href="index.html">Home</a></li>
+                <li class="hideLi"><a href="article.html">Articles</a></li>
+                <li class="hideLi"><a href="contact.html">Contact</a></li>
+                <li class="hideLi"><a href="sources.html">Sources</a></li>
+            </ul>
+        </nav>
+        <a id="search-bar-button" href="javascript:void(0)" onclick="toggleSearchBar()">
+            <i class="fa-solid fa-magnifying-glass" title="menu" aria-hidden="true"></i>
+            <span class="sr-only">Search Bar</span>
+        </a>
+        <div id="search-bar">
+            <input type="text" placeholder="Search">
+        </div>
+    </header>
+
+    <main class="contact-main">
+        <div class="contact-header">
+            <img class="pixel-asset" src="images/bytebomb-contact.gif" alt="">
+            <h2>Contact Us!</h2>
+        </div>
+        <form
+        action="https://formspree.io/f/xvgobewo"
+        method="POST"
+        id="contact-form"
+        >
+        <label id="label-fname"> 
+            First Name
+            <input type="text" name="first-name">
+        </label>
+
+        <label id="label-lname"> 
+            Last Name
+            <input type="text" name="last-name">
+        </label>
+
+        <label id="label-email">
+            Email
+            <input type="email" name="email">
+        </label>
+
+        <label id="label-message">
+            Message
+            <textarea name="message"></textarea>
+        </label>
+            <div class="submit-button-container">
+                <button type="submit">Send</button>
+            </div>
+        </form>
+    </main>
+
+ 
+    <footer>
+        <p>&copy; Neil Geniebla</p>
+        <ul id="socials">
+            <li>
+                <a href="https://x.com">
+                    <i class="fab fa-twitter" title="Twitter" aria-hidden="true"></i>
+                    <span class="sr-only">Twitter</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://facebook.com">
+                    <i class="fab fa-facebook" title="Facebook" aria-hidden="true"></i>
+                    <span class="sr-only">Facebook</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://instagram.com">
+                    <i class="fab fa-instagram" title="Instagram" aria-hidden="true"></i>
+                    <span class="sr-only">Instagram</span>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <script type="text/javascript" src="header.js"></script>
+</body>
+</html>

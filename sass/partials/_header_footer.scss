@@ -1,0 +1,210 @@
+// Styling for header, nav bar, and footer (which are used in all pages).
+
+header {
+    background-color: $heading_color_bg;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 2rem;
+    margin-bottom: 3rem;
+    justify-content: space-around;
+    align-items: center;
+    color: $heading_color;
+    
+    border-bottom: 4px solid $section-shadow;
+    
+    @media screen and (min-width: 1100px) {
+        padding-bottom: 1rem;
+    }
+}
+
+header .fa-solid {
+    color: $heading_color;
+    /* vertical-align: -2.2rem; */
+}
+
+#ham-menu-button {
+    order: 0;
+}
+
+.heading-wrapper {
+    order: 1;
+    max-width: 20%;
+    margin: 0 20%;
+    // transform: scale(0.555555);
+    display: flex;  
+    align-items: center;
+    
+    img {
+        display: none;
+    }
+    
+
+    @media screen and (min-width: 600px) {
+        max-width: 30%;
+        margin: 0;
+        img {
+            display: block;
+            margin-right: 6px;
+            width: 5vw;
+            transform: translateY(-2px);
+        }
+    }
+
+    @media screen and (min-width: 1100px) {
+        img {
+            display: block;
+            width: 50px;
+        }
+    }
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: opacity 0.9s ease-out;
+    text-align: center;
+    a {
+        text-decoration: none;
+        color: $heading_color;
+    }
+}
+
+#search-bar-button {
+    order: 3;
+
+    @media screen and (min-width: 600px) {
+        display: none;
+    }
+}
+
+nav {
+    flex-basis: 100%;
+    // width: 100%;
+    order: 4;
+    @media screen and (min-width: 1100px) {
+        flex-basis: 20%;
+        order: 2;
+    }
+}
+
+#menu {
+    display: block;
+    margin-top: 0.5rem;
+    padding-top: 0;
+    padding-bottom: 0.5rem;
+    max-height: 0vw;
+    background-color: $heading_color_bg;
+    list-style-type: none;
+    transition: max-height 0.25s ease-out 0.1s, padding-top 0.1s ease-in;
+    
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    li {
+        opacity: 1;
+        transition: 0.30s;
+        margin-bottom: 3vw;
+    }
+    
+    .hideLi {
+        opacity: 0;
+    }
+    
+    @media screen and (min-width: 600px) {
+        padding: 0 0 0 2.5rem;
+    }
+    
+    @media screen and (min-width: 1100px) {
+        display: flex;
+        max-height: 3rem;
+        padding: 0;
+        gap: 3rem;
+        margin-bottom: 0;
+
+        .hideLi {
+            opacity: 1;
+        }
+    }
+}
+
+#ham-menu-button {
+    @media screen and (min-width: 1100px) {
+        display: none;
+        order: 4;
+    }
+}
+
+#search-bar{
+    order: 2;
+    max-width: 0px;
+    // margin: 1rem;
+    top: -99rem;
+    position: fixed;
+    display: flex;
+    flex-basis: 60%;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    padding: 0;
+    transition: opacity 0.25s ease-out 0.1s;
+    height: 6vw;
+
+    input {
+        z-index: 1;
+        height: 50%;
+        width: 90%;
+        background-color: $heading_color_bg;
+        border: 4px solid $heading_color;
+        border-radius: 8px;
+        color: $heading_color;
+        padding: 8px;
+    }
+    
+    input::placeholder {
+        color: $heading_color;
+    }
+    
+    @media screen and (min-width: 600px) {
+        position: static;
+        top: 0;
+        opacity: 1;
+        max-width: 40%;
+        
+        input {
+            height: 30%;
+        }
+    }
+    
+    @media screen and (min-width: 1100px) {
+        max-width: 20%;
+
+        input {
+            height: 20%;
+        }
+    }
+}
+
+footer {
+    display: flex;
+    padding: 0 1.5rem;
+    color: $footer_color;
+    background-color: $primary;
+    justify-content: space-between;
+
+    border-top: 4px solid $section-shadow;
+    
+    #socials {
+        display: flex;
+        list-style-type: none;
+        gap: 1rem;
+
+        li a{
+            color: $footer_color;
+        }
+
+    }
+}
